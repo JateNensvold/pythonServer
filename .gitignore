@@ -1,0 +1,6 @@
+# Ignore Virtual Environment
+venv
+
+# Ignore VS-code files
+*.code-workspace
+*.vscode
