@@ -1,0 +1,110 @@
+@font-face {
+    font-family: Vollkorn;
+    src: url(../fonts/Vollkorn/Vollkorn-VariableFont_wght.ttf);
+}
+
+/* @keyframes tutsFade {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+} */
+
+.placeholder {
+    background-color: #f6f6f6;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.placeholder img {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: opacity 1s linear;
+}
+
+.placeholder img.loaded {
+    opacity: 1;
+}
+
+.img-small {
+    filter: blur(50px);
+    /* this is needed so Safari keeps sharp edges */
+    transform: scale(1);
+}
+
+
+.column {
+    /* Create 1/3 of a column that is 80% of the screen height*/
+    float: left;
+    width: 33%;
+    height: 80vh;
+}
+
+.hidden {
+    /* animation-name: tutsFade;
+    animation-duration: 3500ms; */
+    /* display: none; */
+}
+
+.background-image {
+    /* set background image to fit on screen */
+    background-image: url(../img/base/background-cards.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container {
+    /* Center all elements inside this container */
+    position: relative;
+}
+
+.row {
+    /* Create a row that has padding on each side */
+    padding-left: 15vw;
+    padding-right: 15vw;
+}
+
+img {
+    /* Set an image to fill its container */
+    object-fit: cover;
+    height: 100%;
+    width: 100%
+}
+
+.centered-text {
+    /* Center text on column/img */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: Vollkorn;
+    font-size: 36px;
+    color: rgba(255, 255, 255, 0.932);
+    transform: translate(-50%, -50%);
+}
+
+.container:hover {
+    /* transform: scale(1.3); */
+    /* transform-origin: 50% 50%; */
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}

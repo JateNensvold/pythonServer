@@ -4,3 +4,7 @@ venv
 # Ignore VS-code files
 *.code-workspace
 *.vscode
+
+# Python cache files
+*.pyc
+*/__pycache__

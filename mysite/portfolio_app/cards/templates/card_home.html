@@ -1,0 +1,27 @@
+{% comment %} {% extends "base.html" %} {% endcomment %}
+{% load static %}
+{% block styles%}
+{% comment %} <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> {% endcomment %}
+<link rel="stylesheet" href="{% static 'cards/css/card_home.css' %}" />
+<script src="{% static "cards/js/card_home.js" %}"></script>
+
+{% endblock %}
+{% block page_content %}
+
+<body class="background-image">
+    <h1>Cards</h1>
+    <div class="row hidden">
+        {% for key, value in sports.items %}
+        <div class="column">
+            <div class="container">
+                <a href="{% url 'card_index'%}" class="btn btn-primary">
+                    <img src="{% static value.image %}">
+                    <div class="centered-text ">{{key.upper}}</div>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+{% endblock %}
