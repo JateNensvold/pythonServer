@@ -1,0 +1,27 @@
+.column {
+    float: left;
+    width: 33.33%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 200px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* .row {
+    color: green;
+}
+
+h5 {
+    color: red;
+}
+
+body {
+    background: green;
+} */

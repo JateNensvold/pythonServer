@@ -1,0 +1,4 @@
+for f in *"$1"; do
+    echo "$1 ${f%$1}.webp" 
+    cwebp "$f" -o "${f%$1}.webp"
+done

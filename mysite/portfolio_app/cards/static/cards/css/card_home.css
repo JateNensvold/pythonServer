@@ -17,29 +17,13 @@
     }
 } */
 
-.placeholder {
-    background-color: #f6f6f6;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    overflow: hidden;
-}
 
-.placeholder img {
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    transition: opacity 1s linear;
-}
-
-.placeholder img.loaded {
+.container img.loaded {
     opacity: 1;
 }
 
 .img-small {
-    filter: blur(50px);
+    filter: blur(5px);
     /* this is needed so Safari keeps sharp edges */
     transform: scale(1);
 }
@@ -60,15 +44,29 @@
 
 .background-image {
     /* set background image to fit on screen */
-    background-image: url(../img/base/background-cards.jpg);
+    background-image: url(../img/base/placeholder/background-cards-preview.jpg);
+    background-image: url(../img/base/placeholder/background-cards-preview.svg), none;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 
+#container {
+    /* height: 420px; */
+    /* overflow-y: scroll; */
+}
+
 .container {
     /* Center all elements inside this container */
     position: relative;
+}
+
+.container img {
+    /* opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%; */
+    transition: opacity 1s linear;
 }
 
 .row {
